@@ -1,4 +1,6 @@
 class Pessoa:  # A classe funciona como uma forma de gelo
+    olhos=2
+
     def __init__(self,*filhos, nome=None, idade=38):
         self.idade = idade
         self.nome = nome
@@ -20,5 +22,12 @@ if __name__ == '__main__':
         print(filho.nome)
 maria.sobrenome='Moreno'
 del maria.filhos
+maria.olhos=1
+del maria.olhos
 print(maria.__dict__)
 print(rone.__dict__)
+Pessoa.olhos=3
+print(Pessoa.olhos)
+print(maria.olhos)
+print(rone.olhos)
+print(id(Pessoa.olhos),id(maria.olhos),id(rone.olhos))
