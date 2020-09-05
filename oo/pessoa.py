@@ -9,6 +9,13 @@ class Pessoa:  # A classe funciona como uma forma de gelo
     def cumprimentar(self):  # para criar tipos personalizados
         return f'Olá {id(self)}'
 
+    @staticmethod
+    def metodo_estatico():
+         return 42
+
+    @classmethod
+    def nome_e_atributos_de_classe(cls):
+         return f'{cls} - olhos{cls.olhos}'
 
 if __name__ == '__main__':
     rone = Pessoa(nome='Rone')
@@ -31,3 +38,5 @@ print(Pessoa.olhos)
 print(maria.olhos)
 print(rone.olhos)
 print(id(Pessoa.olhos),id(maria.olhos),id(rone.olhos))
+print(Pessoa.metodo_estatico(), maria.metodo_estatico())
+print(Pessoa.nome_e_atributos_de_classe(),  maria.nome_e_atributos_de_classe())
